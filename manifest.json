@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "CBB Metrics Extender",
+  "version": "0.1",
+  "description": "Add filtering by Conference/Quad/Kenpom as well as other utilities to popular college basketball sites like sports-reference, haslametrics, and kenpom",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.sports-reference.com/cbb/*gamelogs.html",
+        "https://www.sports-reference.com/cbb/*gamelog*"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "CBB Extender",
+    "default_popup": "htmls/popup.html"
+  },
+  "permissions": ["activeTab"]
+}
